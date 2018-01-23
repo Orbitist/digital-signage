@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{{ content }}	
+
+<!-- Spinner Script -->
+<script>
+  function removeSpinner() {
+    $(document).find(".spinner").delay(3000).fadeOut(1000, function () {
+      $(this).remove();
+    });
+  };
+
+  removeSpinner();
+</script>

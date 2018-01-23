@@ -1,0 +1,12 @@
+permalink: :title
+
+highlighter: rouge
+markdown: kramdown
+
+title : Poster by Orbitist
+
+production_url : labs.orbitist.com/poster
+
+baseurl : /poster
+
+timezone : America/New_York

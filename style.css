@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+
+body {
+  margin-top: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+p {
+  max-width: 500px;
+  margin: 10px auto;
+  font-weight: 300;
+  padding: 0 5px;
+  /* Careful, this breaks the word wherever it is without a hyphen */
+overflow-wrap: break-word;
+word-wrap: break-word;
+
+/* Adds a hyphen where the word breaks */
+-webkit-hyphens: auto;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+}
+
+iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.btn {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mapsListImage {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.mapsListImage img {
+  min-width: 100%;
+}
+
+iframe.mapEmbed {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+/* Hero Styles */
+.hero {
+  background: url('img/spain.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: calc(100vh - 50px);
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: black;
+  opacity: 0.4;
+}
+
+.hero-text {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  margin-top: 20%;
+  padding: 0 5px;
+  text-align: center;
+}
+
+@-webkit-keyframes arrow-jump {
+  0%   { opacity: 1;}
+  50% { opacity: 1;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -0-transform: translateY(10px);
+    transform: translateY(10px);
+    }
+    100% { opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -0-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+}
+
+.hero-button {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  -webkit-animation: arrow-jump 1s infinite;
+  -moz-animation:    arrow-jump 1s infinite
+  -o-animation:      arrow-jump 1s infinite;
+  animation:         arrow-jump 1s infinite;
+}
+.hero-button:hover, .hero-button:visited, .hero-button:active {
+  color: #eee;
+}
+
+/* Spinner */
+.spinner {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: white;
+z-index: 6;
+}
+.sk-spinner-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  background-color: #7aadc4;
+  border-radius: 100%;
+  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+@-webkit-keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+@keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }

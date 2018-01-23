@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset='utf-8' />
+    <title>Orbitist Spanish Classroom Maps</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta name="description" content="Use these maps in your Spanish classroom to teach about culture, history, customs, and more!">
+    <meta name="author" content="Orbitist LLC">
+    <meta property="og:title" content="Interactive Spanish Classroom Maps" />
+    <meta property="og:description" content="Use these maps in your Spanish classroom to teach about culture, history, customs, and more!" />
+    <meta property="og:image" content="https://orbitist.space/maps/sites/default/files/styles/map_info/public/map-images/Sagrada_Familia_01.jpg?itok=X3oKzqvO" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@orbitistllc">
+    <meta name="twitter:creator" content="@orbitistllc">
+    <meta name="twitter:title" content="Interactive Spanish Classroom Maps">
+    <meta name="twitter:description" content="Use these maps in your Spanish classroom to teach about culture, history, customs, and more!">
+    <meta name="twitter:image:src" content="https://orbitist.space/maps/sites/default/files/styles/map_info/public/map-images/Sagrada_Familia_01.jpg?itok=X3oKzqvO">
+    <link rel="shortcut icon" href="http://static1.squarespace.com/static/55a95d75e4b0ca41a09fafe7/t/589e21d6414fb5bf98b09b63/1486762029750/?format=1500w">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://static1.squarespace.com/static/55a95d75e4b0ca41a09fafe7/t/589e21d6414fb5bf98b09b63/1486762029750/?format=1500w">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://use.fontawesome.com/a118b04c82.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link href='/style.css' rel='stylesheet' />
+</head>
+
+	<body>
+		<nav style="margin-bottom:0px;border-radius:0px;" class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">
+        <img style="height:100%;" alt="Brand" src="http://static1.squarespace.com/static/55a95d75e4b0ca41a09fafe7/t/589e21d6414fb5bf98b09b63/1486762029750/?format=1500w">
+      </a>
+    </div><!-- /.navbar-header -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i> Maps <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="menuItems">
+          </ul>
+        </li>
+        <li><a href="http://www.orbitist.com/donate"><i class="fa fa-gift"></i> Donate</a></li>
+      </ul>
+    </div><!-- /.collapse navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <h2>Spanish Classroom Maps</h1>
+    <p class="lead">Use these maps in your Spanish classroom to teach about culture, history, customs, and more!</p>
+  </div>
+  <a class="hero-button" href="#firstPost"><i class="fa fa-arrow-down"></i></a>
+  <div class="hero-overlay"></div>
+</div>
+
+<!-- Spinner -->
+<div class="spinner">
+  <div class="sk-spinner sk-spinner-pulse"></div>
+</div>
+
+<hr>
+<div id="firstPost"></div>
+<div id="mapsList"></div>
+
+<script>
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1653',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1653"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1653"><a href="/wonders-of-spain"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/wonders-of-spain" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1740',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1740"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1740"><a href="/tipping"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/tipping" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=550',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#550"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="550"><a href="/quinceanera"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/quinceanera" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=2567',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#2567"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="2567"><a href="/mexican-independence"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/mexican-independence" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1840',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1840"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1840"><a href="/did-you-know"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/did-you-know" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1161',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1161"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1161"><a href="/day-of-the-dead"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/day-of-the-dead" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1562',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1562"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1562"><a href="/christmas"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/christmas" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=1907',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#1907"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="1907"><a href="/celebrate"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/celebrate" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+    // Get points geojson data //
+    var mapInfo = (function () {
+      var mapInfo = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': 'https://orbitist.space/maps/api/v1/map.json?mapid=2731',
+            'dataType': "json",
+            'success': function (data) {
+                mapInfo = data;
+            }
+        });
+        return mapInfo;
+    })();
+    $('#menuItems').append('<li><a href="#2731"><i class="fa fa-map-marker"></i> ' + mapInfo[0].map_title + '</a></li>');
+    $('#mapsList').append('<div class="post-hero" id="2731"><a href="/bailamos"><div class="mapsListImage"><img class="img-responsive" src="' + mapInfo[0].map_image + '" /></div><h3>' + mapInfo[0].map_title + '</h3></a></div><p>' + mapInfo[0].map_body + '</p><div class="text-center"><a class="btn btn-lg btn-success" href="/bailamos" role="button">View Map <i class="fa fa-arrow-right"></i></a></div><hr>');
+  
+
+  function removeSpinner() {
+    $(document).find(".spinner").delay(2000).fadeOut(1000, function () {
+      $(this).remove();
+    });
+  };
+
+  removeSpinner();
+</script>
+	
+
+		<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+	</body>
+</html>
