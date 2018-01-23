@@ -1,2 +1,2 @@
-# spanish
-A collection of maps to be used in K-12 Spanish Classrooms.
+# digital-signage
+A general use digital signage site for displaying json data on TVs
