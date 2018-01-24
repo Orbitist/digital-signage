@@ -1,5 +1,5 @@
 // Get news
-(function() {
+function getNews() {
   var eventsAPI = "http://live-westfield-ny.pantheonsite.io/api/latest-news";
   $.getJSON(eventsAPI)
   .done(function( data ) {
@@ -21,4 +21,11 @@
       );
     }
   });
-})();
+};
+
+getNews();
+
+setInterval(function(){
+    $('#news-content').html('');
+    getNews();
+},300000);

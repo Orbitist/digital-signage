@@ -5,7 +5,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 
 
 // Get current weather
-(function() {
+function getWeather() {
   var currentWeatherAPI = "http://api.openweathermap.org/data/2.5/weather?zip=14787,us&units=imperial&APPID=4e527f2dc589c215d247d03fc3b2263a";
   $.getJSON(currentWeatherAPI)
     .done(function( data ) {
@@ -17,10 +17,10 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
         "</div><!-- .col-md-4 -->"
      );
     });
-})();
+};
 
 // Get 2-day forcast
-(function() {
+function getForecast() {
   var forecastWeatherAPI = "http://api.openweathermap.org/data/2.5/forecast?zip=14787,us&units=imperial&APPID=4e527f2dc589c215d247d03fc3b2263a";
   $.getJSON(forecastWeatherAPI)
     .done(function( data ) {
@@ -39,4 +39,13 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
         "</div><!-- .col-md-4 -->"
       );
     });
-})();
+};
+
+getWeather();
+getForecast();
+
+setInterval(function(){
+    $('#weather-content').html('');
+    getWeather();
+    getForecast();
+},300000);
