@@ -13,7 +13,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
         "<div class='col-md-4'>" +
         "<h3>Now</h3>" +
         "<img src='http://labs.orbitist.com/poster/img/weather-icons/" + data.weather[0].icon + ".svg'>" +
-        "<p class='lead'>" + data.main.temp.toFixed() + "°</p>" +
+        "<p>" + data.main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"
      );
     });
@@ -28,14 +28,14 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
         "<div class='col-md-4'>" +
         "<h3>Tomorrow</h3>" +
         "<img src='http://labs.orbitist.com/poster/img/weather-icons/" + data.list[8].weather[0].icon + ".svg'>" +
-        "<p class='lead'>" + data.list[6].main.temp.toFixed() + "°</p>" +
+        "<p>" + data.list[6].main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"
       );
       $( "#weather-content" ).append(
         "<div class='col-md-4'>" +
         "<h3>" + days[dayAfterTomorrow] + "</h3>" +
         "<img src='http://labs.orbitist.com/poster/img/weather-icons/" + data.list[16].weather[0].icon + ".svg'>" +
-        "<p class='lead'>" + data.list[14].main.temp.toFixed() + "°</p>" +
+        "<p>" + data.list[14].main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"
       );
     });

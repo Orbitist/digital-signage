@@ -65,6 +65,18 @@ hr {
   background-color: rgba(125, 139, 145, 0.8);
 }
 
+.weather img {
+  width: 100px;
+  margin-right: 20px;
+  float: left;
+}
+
+.weather p {
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 25px;
+}
+
 .events {
   position: absolute;
   top: 33%;
