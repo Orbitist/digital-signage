@@ -1,4 +1,4 @@
 ---
 layout: basic
-message: "Hello World!"
+heading: "Welcome to Westfield, NY"
 ---

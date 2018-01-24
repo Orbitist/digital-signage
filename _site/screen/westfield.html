@@ -15,40 +15,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<link href='/style.css' rel='stylesheet' />
+    <!-- CSS -->
+		<link href='/css/style.css' rel='stylesheet' />
 </head>
 
 	<body>
-		<h1>Hello World!</h1>
+		<div class="poster">
+  
+  <div class="header">
+    <h1>Welcome to Westfield, NY</h1>
+  </div><!-- .header -->
+  
+  <div class="content">
+    
+    <div class="block weather">
+    </div><!-- .block .weather -->
 
+    <div class="block events">
+    </div><!-- .block .events -->
 
-
-<!-- Spinner Script -->
-<script>
-  function removeSpinner() {
-    $(document).find(".spinner").delay(3000).fadeOut(1000, function () {
-      $(this).remove();
-    });
-  };
-
-  removeSpinner();
-</script>
-		<script>
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-</script>
-
+    <div class="block news">
+    </div><!-- .block .news -->
+    
+  </div><!-- .content -->
+  
+</div><!-- .poster -->
+		
 	</body>
 </html>

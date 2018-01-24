@@ -1,18 +1,23 @@
 ---
 layout: default
 ---
+<div class="poster">
+  
+  <div class="header">
+    <h1>{{ page.heading }}</h1>
+  </div><!-- .header -->
+  
+  <div class="content">
+    
+    <div class="block weather">
+    </div><!-- .block .weather -->
 
-<h1>{{ page.message }}</h1>
+    <div class="block events">
+    </div><!-- .block .events -->
 
-
-
-<!-- Spinner Script -->
-<script>
-  function removeSpinner() {
-    $(document).find(".spinner").delay(3000).fadeOut(1000, function () {
-      $(this).remove();
-    });
-  };
-
-  removeSpinner();
-</script>
+    <div class="block news">
+    </div><!-- .block .news -->
+    
+  </div><!-- .content -->
+  
+</div><!-- .poster -->
