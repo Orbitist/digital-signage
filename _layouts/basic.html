@@ -2,25 +2,34 @@
 layout: default
 ---
 <div class="poster">
-  
-  <div class="header">
+
+  <div class="region header">
     <h1>{{ page.heading }}</h1>
-  </div><!-- .header -->
-  
+  </div><!-- .region .header -->
+
   <div class="content">
-    
-    <div class="block weather">
-      <div id="weather"></div>
-    </div><!-- .block .weather -->
 
-    <div class="block events">
-      <div id="events"></div>
-    </div><!-- .block .events -->
+    <div class="region weather">
+      <div class="block">
+        <h1><i class="fa fa-sun-o"></i></h1>
+        <div id="weather-content"></div>
+      </div><!-- .block -->
+    </div><!-- .region .weather -->
 
-    <div class="block news">
-      <div id="news"></div>
-    </div><!-- .block .news -->
-    
+    <div class="region events">
+      <div class="block">
+        <h1><i class="fa fa-calendar"></i></h1>
+        <div id="events-content"></div>
+      </div><!-- .block -->
+    </div><!-- .region .events -->
+
+    <div class="region news">
+      <div class="block">
+        <h1><i class="fa fa-newspaper-o"></i></h1>
+        <div id="news-content"></div>
+      </div><!-- .block -->
+    </div><!-- .region .news -->
+
   </div><!-- .content -->
-  
+
 </div><!-- .poster -->
