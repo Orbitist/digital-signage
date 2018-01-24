@@ -11,7 +11,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
     .done(function( data ) {
       $( "#weather-content" ).append(
         "<div class='col-md-4'>" +
-        "<h2>Now</h2>" +
+        "<h3>Now</h3>" +
         "<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>" +
         "<p class='lead'>" + data.main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"
@@ -26,14 +26,14 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
     .done(function( data ) {
       $( "#weather-content" ).append(
         "<div class='col-md-4'>" +
-        "<h2>Tomorrow</h2>" +
+        "<h3>Tomorrow</h3>" +
         "<img src='http://openweathermap.org/img/w/" + data.list[8].weather[0].icon + ".png'>" +
         "<p class='lead'>" + data.list[6].main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"
       );
       $( "#weather-content" ).append(
         "<div class='col-md-4'>" +
-        "<h2>" + days[dayAfterTomorrow] + "</h2>" +
+        "<h3>" + days[dayAfterTomorrow] + "</h3>" +
         "<img src='http://openweathermap.org/img/w/" + data.list[16].weather[0].icon + ".png'>" +
         "<p class='lead'>" + data.list[14].main.temp.toFixed() + "°</p>" +
         "</div><!-- .col-md-4 -->"

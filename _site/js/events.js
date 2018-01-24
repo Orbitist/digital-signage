@@ -5,10 +5,9 @@
   .done(function( data ) {
     for (i = 0; i < 5; i++) {
       $( "#events-content" ).append(
-        "<h2>" + data[i].title + "</h2>" +
-        "<p>" + data[i].field_section + "</p>" +
-        "<p class='lead'>" + data[i].field_date_time + "</p>" +
-        "<p>" + data[i].field_address + "</p>"
+        "<h3>" + data[i].title + " - " + data[i].field_section + "</h3>" +
+        "<p class='lead'>" + data[i].field_date_time + " - " + data[i].field_address + "</p>" +
+        "<hr>"
       );
     }
   });

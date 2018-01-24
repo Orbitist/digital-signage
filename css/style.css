@@ -8,6 +8,7 @@
   background-color: #eee;
   background-image: url("http://live-westfield-ny.pantheonsite.io/sites/default/files/styles/hero_2500/public/2018-01/1N1A1784.JPG?itok=dTslNP2p");
   background-size: cover;
+  color: #eee;
 }
 
 .poster .header {
@@ -36,7 +37,16 @@
 .block {
   background-color: rgba(255,255,255,0.6);
   height: 100%;
-  padding: 20px;
+  overflow: hidden;
+}
+
+.block-header {
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+}
+
+.block-content {
+  padding: 10px;
 }
 
 .weather {
@@ -47,18 +57,30 @@
   height: 33%;
 }
 
+.weather .block {
+  background-color: rgba(125, 139, 145, 0.8);
+}
+
 .events {
   position: absolute;
   top: 33%;
   left: 0;
   width: 50%;
-  height: 67%;
+  height: calc(67% - 20px);
+}
+
+.events .block {
+  background-color: rgba(219, 124, 78, 0.8);
 }
 
 .news {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 50%;
-  height: 100%;
+  width: calc(50% - 20px);
+  height: calc(100% - 20px);
+}
+
+.news .block {
+  background-color: rgba(50, 90, 35, 0.8);
 }

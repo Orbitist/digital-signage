@@ -11,7 +11,7 @@
       }
       $( "#news-content" ).append(
         eventImage +
-        "<h2>" + data[i].title + "</h2>" +
+        "<h3>" + data[i].title + "</h3>" +
         "<p class='lead'>" + data[i].field_section + "</p>" +
         "<p>" + data[i].body + "</p>"
       );
