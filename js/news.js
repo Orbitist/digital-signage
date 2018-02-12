@@ -1,6 +1,6 @@
 // Get news
 function getNews() {
-  var eventsAPI = "http://live-westfield-ny.pantheonsite.io/api/latest-news";
+  var eventsAPI = "https://westfieldny.com/api/latest-news";
   $.getJSON(eventsAPI)
   .done(function( data ) {
     for (i = 0; i < 5; i++) {
