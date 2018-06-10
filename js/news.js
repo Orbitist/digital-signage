@@ -1,6 +1,6 @@
 // Get news
 function getNews() {
-  var eventsAPI = "https://westfieldny.com/api/latest-news";
+  var eventsAPI = "https://westfieldny.com/api/latest-news?_format=json";
   $.getJSON(eventsAPI)
   .done(function( data ) {
     for (i = 0; i < 5; i++) {
