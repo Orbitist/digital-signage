@@ -1,6 +1,6 @@
 // Get events
 function getEvents() {
-  var eventsAPI = "https://westfieldny.com/api/upcoming-events";
+  var eventsAPI = "https://westfieldny.com/api/upcoming-events?_format=json";
   $.getJSON(eventsAPI)
   .done(function( data ) {
     for (i = 0; i < 4; i++) {
